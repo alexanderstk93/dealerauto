@@ -1,10 +1,18 @@
 import React from "react";
 import { useSelector } from "react-redux/es/hooks/useSelector";
-import PreviewCard from "./PreviewCard";
+import PreviewCard from "./CarPreviewCard";
+import WheelPreviewCard from "./WheelPreviewCard";
 export default function PreviewList() {
-  const previews = useSelector((state) => state.preview.previews);
+  const carPreviews = useSelector((state) => state.preview.carPreviews);
+  const wheelsPreviews = useSelector((state) => state.preview.wheelsPreviews);
+  const currentSection = useSelector((state) => state.status.currentSection);
 
-  const loadCards = previews.map((preview) => {
+  const vehiclesSectionStyles = `
+  grid gap-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`;
+  const wheelsSectionStyles = `grid gap-12 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 pt-[3rem]`;
+  const toolsSectionStyles = ``;
+
+  const loadCarsCards = carPreviews.map((preview) => {
     return (
       <PreviewCard
         key={preview.id}
@@ -16,10 +24,32 @@ export default function PreviewList() {
       />
     );
   });
+  const loadWheelsCards = wheelsPreviews.map((preview) => {
+    return (
+      <WheelPreviewCard
+        key={preview.id}
+        img={preview.img}
+        price={preview.price}
+        producer={preview.producer}
+      />
+    );
+  });
 
   return (
-    <div className="grid gap-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      {loadCards}
+    <div
+      className={`${
+        currentSection.vehicles
+          ? vehiclesSectionStyles
+          : currentSection.wheels
+          ? wheelsSectionStyles
+          : toolsSectionStyles
+      }`}
+    >
+      {currentSection.vehicles
+        ? loadCarsCards
+        : currentSection.wheels
+        ? loadWheelsCards
+        : "No items found here"}
     </div>
   );
 }

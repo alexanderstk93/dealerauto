@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  previews: [
+  carPreviews: [
     {
       id: 0,
       model: "BMW M4 Competition",
@@ -57,6 +57,38 @@ const initialState = {
       price: "14.637",
       year: "2017",
       img: "https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6ImU1djczcDJydGd6bC1BVVRPVklUUk8iLCJ3IjpbeyJmbiI6InE3bXo1M2JpZnB6ay1BVVRPVklUUk8iLCJzIjoiMTYiLCJwIjoiMTAsLTEwIiwiYSI6IjAifV19.ZgSK2hUmeOsC67zWvmCnuJWeElpn3b-WnaPRVoYYBRI/image;s=1080x720",
+    },
+  ],
+  wheelsPreviews: [
+    {
+      id: 1,
+      producer: "Vossen",
+      price: "1.900",
+      img: require("../assets/images/wheels/vossen/vossen1.png"),
+    },
+    {
+      id: 2,
+      producer: "Vossen",
+      price: "1.599",
+      img: require("../assets/images/wheels/vossen/vossen2.png"),
+    },
+    {
+      id: 3,
+      producer: "Vossen",
+      price: "1.799",
+      img: require("../assets/images/wheels/vossen/vossen3.png"),
+    },
+    {
+      id: 4,
+      producer: "Kansei",
+      price: "399",
+      img: require("../assets/images/wheels/kansei/kansei1.png"),
+    },
+    {
+      id: 5,
+      producer: "Kansei",
+      price: "349",
+      img: require("../assets/images/wheels/kansei/kansei1.png"),
     },
   ],
 };

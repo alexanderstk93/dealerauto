@@ -39,6 +39,10 @@ module.exports = {
           from: { left: "10rem", opacity: 0 },
           to: { left: 0, opacity: 1 },
         },
+        "card-fade-in": {
+          from: { opacity: 0 },
+          to: { opacity: 1 },
+        },
       },
       animation: {
         "fade-in": "fade-in 0.4s ease-in-out forwards",
@@ -48,9 +52,10 @@ module.exports = {
         "slide-right": "slide-right 0.8s ease-out forwards",
         "pop-in": "pop-in 0.8s ease-out forwards",
         "form-in": "form-in 0.8s ease-out forwards",
+        "card-fade-in": "card-fade-in 0.5s ease-out forwards",
       },
       boxShadow: {
-        "4xl": "3px 0px 15px 1px rgba(0,0,0, 0.7)",
+        "4xl": "3px 0px 20px 1px rgba(0,0,0, 0.3)",
         white: "2px 2px 15px 5px rgba(255,255,255)",
       },
     },

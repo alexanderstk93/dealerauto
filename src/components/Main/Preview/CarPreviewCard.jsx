@@ -1,11 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-export default function PreviewCard({ model, km, price, year, img }) {
+export default function CarPreviewCard({ model, km, price, year, img }) {
   const previews = useSelector((state) => state.preview.previews);
 
   return (
-    <div className="shadow-4xl rounded-md overflow-hidden bg-slate-50 cursor-pointer border-gray-300 border-[1px]">
+    <div
+      className={`shadow-4xl rounded-md overflow-hidden bg-slate-50 cursor-pointer border-gray-300 border-[1px] animate-card-fade-in`}
+    >
       <img src={img} alt="" className=" w-full h-[16rem] object-cover" />
 
       <div className="p-[1rem] h-[10rem]">

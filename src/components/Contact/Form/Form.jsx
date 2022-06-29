@@ -22,7 +22,7 @@ export default function Form() {
   };
 
   const inputStyles =
-    "focus:outline-white outline-[1px] lg:outline-[2px] bg-transparent border-slate-500 border-[2px] rounded w-full text-xl lg:text-2xl p-[0.2rem] lg:p-[0.5rem] my-[0.5rem]";
+    "focus:outline-white outline-[1px] lg:outline-[2px] bg-transparent border-slate-500 border-b-[2px] w-full text-xl lg:text-2xl p-[0.2rem] lg:p-[0.5rem] my-[0.5rem]";
   const labelStyles = "font-bold";
   return (
     <form
@@ -58,7 +58,7 @@ export default function Form() {
         </label>
         <textarea
           ref={messageRef}
-          className="h-[10em] focus:outline-white outline-[2px] resize-none w-full mt-[0.5rem] bg-transparent border-slate-500 border-[2px]"
+          className="h-[10em] focus:outline-white outline-[2px] resize-none w-full mt-[2rem] bg-transparent border-slate-500 border-[2px]"
           name=""
           id=""
         ></textarea>
