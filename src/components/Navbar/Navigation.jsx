@@ -27,7 +27,11 @@ export default function Navigation() {
         Contact
       </Link>
       <Link to="/cart" className="relative">
-        <i class="fa fa-shopping-cart lg:ml-[1.5rem] text-2xl "></i>
+        <img
+          className="w-[35px]"
+          src={require("../../assets/images/bag.png")}
+          alt=""
+        />
         <span
           className={`absolute top-[-0.5rem] right-[-1rem] bg-black text-white ${
             windowHeight > 85

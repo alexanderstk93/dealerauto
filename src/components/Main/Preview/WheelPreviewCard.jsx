@@ -45,7 +45,11 @@ export default function WheelPreviewCard({ price, img, producer, id }) {
           onClick={addNewCartItem}
           className="border-[1px] border-black hover:bg-emerald-300 w-[4rem] h-[2.5rem] rounded shadow-xl cursor-pointer"
         >
-          <i class="fa fa-shopping-cart"></i>
+          <img
+            className="w-[30px] mx-auto"
+            src={require("../../../assets/images/shopping-cart.png")}
+            alt=""
+          />
         </button>
         <input
           ref={quantityRef}
