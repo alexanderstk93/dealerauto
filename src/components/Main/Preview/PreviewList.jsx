@@ -9,7 +9,7 @@ export default function PreviewList() {
 
   const vehiclesSectionStyles = `
   grid gap-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`;
-  const wheelsSectionStyles = `grid gap-12 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 pt-[3rem]`;
+  const wheelsSectionStyles = `grid gap-[5rem] grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 pt-[3rem]`;
   const toolsSectionStyles = ``;
 
   const loadCarsCards = carPreviews.map((preview) => {
@@ -28,6 +28,7 @@ export default function PreviewList() {
     return (
       <WheelPreviewCard
         key={preview.id}
+        id={preview.id}
         img={preview.img}
         price={preview.price}
         producer={preview.producer}

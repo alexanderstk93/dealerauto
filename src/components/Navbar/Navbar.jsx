@@ -69,6 +69,12 @@ export default function Navbar() {
       >
         {/* LEFT NAV / ICON WITH LOGO NAME*/}
         <div className="justify-center mt-[2rem] lg:mt-0 lg:basis-1/4 flex items-center lg:ml-[5rem]">
+          {/* PHONE NUMBER */}
+          <div className="hidden absolute left-[1%] font-bold italic 2xl:flex items-center">
+            <i className="fas fa-phone mr-[0.5rem]"></i>
+            <p className="">+40 771 160 345</p>
+          </div>
+          {/* LOGO IMG WITH TEXT */}
           <img
             src={require("../../assets/images/racing-car.png")}
             className="w-[50px] mr-[1rem]"

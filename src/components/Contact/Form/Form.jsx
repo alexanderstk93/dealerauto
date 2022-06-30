@@ -22,12 +22,12 @@ export default function Form() {
   };
 
   const inputStyles =
-    "focus:outline-white outline-[1px] lg:outline-[2px] bg-transparent border-slate-500 border-b-[2px] w-full text-xl lg:text-2xl p-[0.2rem] lg:p-[0.5rem] my-[0.5rem]";
+    "focus:outline-white outline-[1px] lg:outline-[2px] bg-transparent border-slate-400 border-b-[2px] w-full text-xl lg:text-2xl p-[0.2rem] lg:p-[0.5rem] my-[0.5rem]";
   const labelStyles = "font-bold";
   return (
     <form
       onSubmit={onSubmitHandler}
-      className=" rounded text-start text-white italic w-full lg:w-[70%] p-[2rem] mx-auto relative top-[50%] translate-y-[-50%] shadow-4xl border-slate-600 border-opacity-10 border-[1p] bg-transparent"
+      className=" rounded text-start text-white italic w-full lg:w-[70%] p-[2rem] mx-auto relative top-[50%] translate-y-[-50%] shadow-4xl border-slate-600 border-[1px] border-opacity-100 border-[1p] bg-black bg-opacity-50"
     >
       <div className="">
         <label htmlFor="" className={labelStyles}>
@@ -58,7 +58,7 @@ export default function Form() {
         </label>
         <textarea
           ref={messageRef}
-          className="h-[10em] focus:outline-white outline-[2px] resize-none w-full mt-[2rem] bg-transparent border-slate-500 border-[2px]"
+          className="h-[10em] focus:outline-white outline-[2px] resize-none w-full mt-[2rem] bg-transparent border-slate-400 border-[2px]"
           name=""
           id=""
         ></textarea>

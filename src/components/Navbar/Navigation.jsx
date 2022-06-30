@@ -8,6 +8,9 @@ export default function Navigation() {
     "active:bg-slate-300 lg:active:bg-inherit my-[1rem] lg:mx-[0.8rem] lg:cursor-pointer  font-bold italic border-b-4 border-transparent lg:hover:border-[#eb1026]";
   const dispatch = useDispatch();
   const windowHeight = useSelector((state) => state.status.windowHeight);
+
+  const cartItemsQuantity = useSelector((state) => state.cart.length);
+
   return (
     <ul className="flex flex-col items-center lg:flex-row lg:justify-end mt-[5rem] lg:mr-10 lg:mt-0 text-xl">
       <a
@@ -17,13 +20,13 @@ export default function Navigation() {
       >
         Available Models
       </a>
-      <Link to={"/about"} className={linkStyles}>
+      {/* <Link to={"/about"} className={linkStyles}>
         About
-      </Link>
+      </Link> */}
       <Link to={"/contact"} className={linkStyles}>
         Contact
       </Link>
-      <Link to="" className="relative">
+      <Link to="/cart" className="relative">
         <i class="fa fa-shopping-cart lg:ml-[1.5rem] text-2xl "></i>
         <span
           className={`absolute top-[-0.5rem] right-[-1rem] bg-black text-white ${
@@ -32,7 +35,7 @@ export default function Navigation() {
               : "lg:bg-white lg:text-black"
           } h-[1.5rem] w-[1.5rem] rounded-[50%] flex items-center justify-center`}
         >
-          0
+          {cartItemsQuantity}
         </span>
       </Link>
     </ul>

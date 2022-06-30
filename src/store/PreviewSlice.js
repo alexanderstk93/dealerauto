@@ -90,6 +90,24 @@ const initialState = {
       price: "349",
       img: require("../assets/images/wheels/kansei/kansei1.png"),
     },
+    {
+      id: 6,
+      producer: "Touren",
+      price: "226",
+      img: require("../assets/images/wheels/touren/touren1.png"),
+    },
+    {
+      id: 7,
+      producer: "Touren",
+      price: "319",
+      img: require("../assets/images/wheels/touren/touren2.png"),
+    },
+    {
+      id: 8,
+      producer: "Touren",
+      price: "249",
+      img: require("../assets/images/wheels/touren/touren3.png"),
+    },
   ],
 };
 

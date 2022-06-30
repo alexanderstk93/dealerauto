@@ -32,7 +32,7 @@ export default function Hero() {
         <div className="z-[-1] w-full h-full bg-black absolute top-0 left-0 opacity-40 lg:opacity-50"></div>
         {/* Background Image */}
         <img
-          className="z-[-2] w-full h-full object-cover absolute top-0 left-0"
+          className="animate-card-fade-in z-[-2] w-full h-full object-cover absolute top-0 left-0"
           src={require("../../assets/images/m4competition.jpg")}
           alt=""
         />

@@ -6,7 +6,7 @@ export default function CarPreviewCard({ model, km, price, year, img }) {
 
   return (
     <div
-      className={`shadow-4xl rounded-md overflow-hidden bg-slate-50 cursor-pointer border-gray-300 border-[1px] animate-card-fade-in`}
+      className={`shadow-4xl rounded-md overflow-hidden bg-slate-50 cursor-pointer border-gray-300 border-[1px]  animate-card-fade-in`}
     >
       <img src={img} alt="" className=" w-full h-[16rem] object-cover" />
 

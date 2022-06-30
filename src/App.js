@@ -8,6 +8,7 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import { useDebugValue, useEffect } from "react";
 import { setWindowHeight } from "./store/statusSlice";
+import Cart from "./components/Cart/Cart";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           }
         />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />} />
         <Route
           path="*"
           element={
